@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <meta
+      name="Description"
+      content="Strona poświęcoana samochodom marki Alfa Romeo"
+    />
+    <meta name="Keywords" content="WWW;Alfa;Romeo;DTM" />
+    <meta name="Author" content="MJ" />
+    <meta charset="UTF-8" />
+    <title>Alfa Romeo</title>
+    <link rel="stylesheet" href="layoutONas.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <img src="https://github.com/Jaroslaw123/myWeb/htmlFiles/alfa_romeo_logo.png" alt="alfa-logo" />
+        <h2>Alfa Romeo</h2>
+      </div>
+    </header>
+    <nav>
+      <li><a href="HistoriaMarki.html">Histora Marki</a></li>
+      <li><a href="CiekaweModele.html">Ciekawe Modele</a></li>
+      <li>
+        <a href="Sprawdz.html"
+          >Sprawdz czy nadajesz się na kierowcę wyścigowego</a
+        >
+      </li>
+      <li><a href="ONas.html">O nas</a></li>
+    </nav>
+    <h2>Kliknij START gdy będziesz chciał rozpocząć odliczanie do wyścigu</h2>
+    <p id="myId">Po zakończeniu odliczania kliknij RACE</p>
+    <p id="res"></p>
+    <button type="button" id="togglee" onclick="startCount()">START</button>
+    <button type="button" id="stopCount" onclick="stopTimer()">RACE</button>
+    <script>
+      function startCount() {
+        document.getElementById("stopCount").style.visibility = "hidden";
+        document.getElementById("togglee").style.visibility = "hidden";
+        let counter = 5;
+        const interval = setInterval(() => {
+          var element = document.getElementById("myId");
+          element.innerText = counter;
+          counter--;
+          if (counter < 0) {
+            clearInterval(interval);
+            startTimer();
+          }
+        }, 1000);
+      }
+      function startMsTimer() {
+        document.getElementById("stopCount").style.visibility = "visible";
+      }
+      var millisec = 0;
+      var seconds = 0;
+      var timer;
+      function display() {
+        if (millisec >= 9) {
+          millisec = 0;
+          seconds += 1;
+        } else millisec += 1;
+        var element = document.getElementById("myId");
+        element.innerText = seconds + "." + millisec;
+        timer = setTimeout("display()", 100);
+      }
+      function startTimer() {
+        document.getElementById("stopCount").style.visibility = "visible";
+        if (timer > 0) {
+          return;
+        }
+        display();
+      }
+      function stopTimer() {
+        var result = document.getElementById("res");
+        result.innerText =
+          "Masz dobry czas reakcjiz ale postaraj się jeszcze poćwiczyć. Sredni czas reakcji kierowcy F1 to 0.1 sekudny ";
+        clearTimeout(timer);
+        timer = 0;
+      }
+    </script>
+  </body>
+</html>

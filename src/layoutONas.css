@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+header {
+  background-color: #000000;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+.header img {
+  float: left;
+  position: center;
+  width: 180px;
+  height: 180px;
+  background: #0000;
+}
+.alfa-logo {
+  image: url(img_alfa_Logo.png);
+  position: center;
+  repeat: no-repeat;
+}
+section {
+  display: flex;
+}
+nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #bebebe;
+}
+article {
+  flex: 3;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}

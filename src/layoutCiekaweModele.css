@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  min-width: 1000px;
+  width: auto !important;
+}
+header {
+  background-color: #000000;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+.header img {
+  float: left;
+  position: center;
+  width: 180px;
+  height: 180px;
+  background: #0000;
+}
+.alfa-logo {
+  image: url(img_alfa_Logo.png);
+  position: center;
+  repeat: no-repeat;
+}
+section {
+  display: flex;
+}
+nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #bebebe;
+}
+article {
+  text-indent: 30px;
+  position: relative;
+  padding-left: 210px;
+  padding-right: 5px;
+  line-height: 150%;
+}
+#container {
+  text-indent: 30px;
+  position: relative;
+  padding-left: 210px;
+  padding-right: 5px;
+  line-height: 150%;
+}
+#sidebar {
+  float: left;
+  width: 200px;
+  background: #ebebeb;
+  padding: 15px 10px 15px 20px;
+}
+#mainContent {
+  list-style-type: none;
+  overflow: hidden;
+  position: relative;
+  margin: 0 0 0 400px;
+  padding: 0 20px 20px 20px;
+}
+
+.sidediv img {
+  float: left;
+  position: center;
+  width: 377px;
+  height: 230px;
+  background: #0000;
+}
